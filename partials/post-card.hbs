@@ -1,7 +1,7 @@
 <article class="gh-card {{post_class}}{{#unless @custom.show_images_in_feed}} no-image{{/unless}}">
     <a class="gh-card-link" href="{{url}}">
         {{#if feature_image}}
-            <figure class="gh-card-image">
+        <figure class="gh-card-image">
                 <img
                     srcset="{{img_url feature_image size="xs" format="webp"}} 160w,
                             {{img_url feature_image size="s" format="webp"}} 320w,
@@ -34,14 +34,10 @@
                     {{^has visibility="public"}}
                         {{> "icons/lock"}}
                     {{/has}}
-                {{/unless}}<!--
-             -->{{#if @custom.show_author}}
-                    <span class="gh-card-author">작성: {{#foreach authors}}{{#if @first}}{{name}}{{else}}, {{name}}{{/if}}{{/foreach}}</span>
-                {{/if}}
-                {{#if @custom.show_publish_date}}
-                    <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-                {{/if}}<!--
-         --></footer>
+                {{/unless}}
+                <span class="gh-card-author">작성: {{#foreach authors}}{{#if @first}}{{name}}{{else}}, {{name}}{{/if}}{{/foreach}}</span>
+                <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+             </footer>
         </div>
     </a>
 </article>
