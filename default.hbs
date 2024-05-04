@@ -74,11 +74,11 @@
             {{#if @site.members_enabled}}
             {{#unless @member}}
                 <section class="gh-subscribe">
-                    <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
+                    <h3 class="gh-subscribe-title">{{@site.title}}의 최신 소식 뉴스레터를 구독해 보세요.</h3>
                     {{#if @custom.email_signup_text}}
                         <div class="gh-subscribe-description">{{@custom.email_signup_text}}</div>
                     {{/if}}
-                    <button class="gh-subscribe-btn gh-btn" data-portal="signup">{{> "icons/email"}} 구독하기기</button>
+                    <button class="gh-subscribe-btn gh-btn" data-portal="signup">{{> "icons/email"}} 구독하기</button>
                 </section>
             {{/unless}}
             {{/if}}
